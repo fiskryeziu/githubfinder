@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { API } from '../api'
-import RepoItem from '../components/repolist/RepoItem'
+import RepoItem from '../components/repo/RepoItem'
 import UserProfile from '../components/userdetails/UserProfile'
 
 const UserDetails = () => {
@@ -31,7 +31,9 @@ const UserDetails = () => {
           <div className="w-full md:w-3/4 flex-col space-y-3">
             <div className="flex justify-evenly text-textColor text-center gap-1 border-borderColor border-b pb-2">
               <div className="w-1/3 bg-header rounded-sm flex items-center justify-center hover:border">
-                <a href={user.html_url}>Visit Github</a>
+                <a href={user.html_url} target="_blank" rel="noreferrer">
+                  Visit Github
+                </a>
               </div>
               <div className="w-1/3 bg-header rounded-sm">
                 <p>Public Gists</p>
