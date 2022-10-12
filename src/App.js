@@ -9,10 +9,10 @@ const App = () => {
     <BrowserRouter>
       <div className="flex flex-col">
         <NavBar />
-        <main className="container mx-auto mt-36">
+        <main className="container mx-auto md:mx-auto mt-36">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/profile/:id" element={<UserDetails />} />
+            <Route path="/profile/:name" element={<UserDetails />} />
           </Routes>
         </main>
       </div>
